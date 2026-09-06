@@ -15,7 +15,7 @@ const errorMiddleware = require("./middleware/errorMiddleware");
 const Project = require("./models/Project");
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
 app.use(express.json());
 
@@ -345,7 +345,6 @@ app.use(errorMiddleware);
 
 
 // START SERVER
-
-app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on port ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
 });
